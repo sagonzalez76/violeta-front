@@ -11,15 +11,15 @@ const email = ref('');
 const handleSubmit = async () => {
     console.log(nombre.value, apellido.value, idNumero.value, email.value);
     try {
-        const response = await axios.post('http://localhost:4000/api/victimas', {
+        const response = await axios.post('https://violeta-back.onrender.com/api/victimas', {
             name: nombre.value,
             lastname: apellido.value,
             id_number: idNumero.value,
             email: email.value
         });
-router.push('/victimario');
-    
-} catch (error) {
+        router.push('/victimario');
+
+    } catch (error) {
         alert('Error al enviar los datos. Por favor, intenta de nuevo.');
     }
 };

@@ -8,7 +8,7 @@ const victimas = ref([]);
 // Función para obtener los datos del servidor
 const fetchVictimas = async () => {
     try {
-        const response = await axios.get('http://localhost:4000/api/victimas');
+        const response = await axios.get('https://violeta-back.onrender.com/api/victimas');
         victimas.value = response.data; // Asignar los datos obtenidos a la referencia
     } catch (error) {
         console.error('Error al obtener las víctimas:', error);

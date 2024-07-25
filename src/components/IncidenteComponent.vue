@@ -24,7 +24,7 @@ const victimas = ref([]);
 // Obtener la lista de víctimas desde la API
 const fetchVictimas = async () => {
     try {
-        const response = await axios.get('http://localhost:4000/api/victimas');
+        const response = await axios.get('https://violeta-back.onrender.com/api/victimas');
         victimas.value = response.data; // Asignar los datos de víctimas a la referencia
     } catch (error) {
         console.error('Error al obtener las víctimas:', error);
@@ -37,7 +37,7 @@ const victimarios = ref([]);
 // Obtener la lista de victimarios desde la API
 const fetchVictimarios = async () => {
     try {
-        const response = await axios.get('http://localhost:4000/api/victimarios');
+        const response = await axios.get('https://violeta-back.onrender.com/api/victimarios');
         victimarios.value = response.data; // Asignar los datos de victimarios a la referencia
     } catch (error) {
         console.error('Error al obtener los victimarios:', error);
@@ -53,7 +53,7 @@ onMounted(() => {
 
 const handleSubmit = async () => {
     try {
-        const response = await axios.post('http://localhost:4000/api/incidencias', {
+        const response = await axios.post('https://violeta-back.onrender.com/api/incidencias', {
             incidentDate: incidentDate.value,
             location: location.value,
             type: type.value,
