@@ -4,7 +4,7 @@
 
 <template>
 
-    <h2>Section title</h2>
+    <h2>Incidentes</h2>
     <div class="table-responsive small">
         <table class="table table-striped table-sm">
             <thead>
